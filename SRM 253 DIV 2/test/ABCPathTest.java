@@ -1,0 +1,78 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class ABCPathTest {
+	
+	@Test(timeout=2000)
+	public void test0() {
+		String[] grid = new String[] { "ABE",
+  "CFG",
+  "BDH",
+  "ABC" };
+		assertEquals(4, new ABCPath().length(grid));
+	}
+	
+	@Test(timeout=2000)
+	public void test1() {
+		String[] grid = new String[] { "A" };
+		assertEquals(1, new ABCPath().length(grid));
+	}
+	
+	@Test(timeout=2000)
+	public void test2() {
+		String[] grid = new String[] { "BCDEFGHIJKLMNOPQRSTUVWXYZ" };
+		assertEquals(0, new ABCPath().length(grid));
+	}
+	
+	@Test(timeout=2000)
+	public void test3() {
+		String[] grid = new String[] { "C",
+  "D",
+  "B",
+  "A" };
+		assertEquals(2, new ABCPath().length(grid));
+	}
+	
+	@Test(timeout=2000)
+	public void test4() {
+		String[] grid = new String[] { "KCBVNRXSPVEGUEUFCODMOAXZYWEEWNYAAXRBKGACSLKYRVRKIO",
+  "DIMCZDMFLAKUUEPMPGRKXSUUDFYETKYQGQHNFFEXFPXNYEFYEX",
+  "DMFRPZCBOWGGHYAPRMXKZPYCSLMWVGMINAVRYUHJKBBRONQEXX",
+  "ORGCBHXWMTIKYNLFHYBVHLZFYRPOLLAMBOPMNODWZUBLSQSDZQ",
+  "QQXUAIPSCEXZTTINEOFTJDAOBVLXZJLYOQREADUWWSRSSJXDBV",
+  "PEDHBZOVMFQQDUCOWVXZELSEBAMBRIKBTJSVMLCAABHAQGBWRP",
+  "FUSMGCSCDLYQNIXTSTPJGZKDIAZGHXIOVGAZHYTMIWAIKPMHTJ",
+  "QMUEDLXSREWNSMEWWRAUBFANSTOOJGFECBIROYCQTVEYGWPMTU",
+  "FFATSKGRQJRIQXGAPLTSXELIHXOPUXIDWZHWNYUMXQEOJIAJDH",
+  "LPUTCFHYQIWIYCVOEYHGQGAYRBTRZINKBOJULGYCULRMEOAOFP",
+  "YOBMTVIKVJOSGRLKTBHEJPKVYNLJQEWNWARPRMZLDPTAVFIDTE",
+  "OOBFZFOXIOZFWNIMLKOTFHGKQAXFCRZHPMPKGZIDFNBGMEAXIJ",
+  "VQQFYCNJDQGJPYBVGESDIAJOBOLFPAOVXKPOVODGPFIYGEWITS",
+  "AGVBSRLBUYOULWGFOFFYAAONJTLUWRGTYWDIXDXTMDTUYESDPK",
+  "AAJOYGCBYTMXQSYSPTBWCSVUMNPRGPOEAVVBGMNHBXCVIQQINJ",
+  "SPEDOAHYIDYUJXGLWGVEBGQSNKCURWYDPNXBZCDKVNRVEMRRXC",
+  "DVESXKXPJBPSJFSZTGTWGAGCXINUXTICUCWLIBCVYDYUPBUKTS",
+  "LPOWAPFNDRJLBUZTHYVFHVUIPOMMPUZFYTVUVDQREFKVWBPQFS",
+  "QEASCLDOHJFTWMUODRKVCOTMUJUNNUYXZEPRHYOPUIKNGXYGBF",
+  "XQUPBSNYOXBPTLOYUJIHFUICVQNAWFMZAQZLTXKBPIAKXGBHXX" };
+		assertEquals(19, new ABCPath().length(grid));
+	}
+	
+	@Test(timeout=2000)
+	public void test5() {
+		String[] grid = new String[] { "EDCCBA",
+  "EDCCBA" };
+		assertEquals(3, new ABCPath().length(grid));
+	}
+	
+	@Test(timeout=2000)
+	public void test6() {
+		String[] grid = new String[] { "AMNOPA",
+  "ALEFQR",
+  "KDABGS",
+  "AJCHUT",
+  "AAIWVA",
+  "AZYXAA" };
+		assertEquals(26, new ABCPath().length(grid));
+	}
+}
