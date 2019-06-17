@@ -45,6 +45,7 @@ public class FriendScore
         {
             if (!seen.contains(neighbor))
             {
+                // cycle detection.
                 count++;
             }
             DFS(adjList, neighbor, depth, seen);
